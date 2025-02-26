@@ -9,8 +9,8 @@ public class BunTest {
     public void getBunNameTest() {
         Assert.assertEquals("Имя Bun выведено неверно", "black bun", bun.getName());
     }
-
+   @Test
     public void getBunPriceTest() {
-        Assert.assertEquals("Цена Bun выведена неверно", 100f, bun.getPrice());
+        Assert.assertEquals("Цена Bun выведена неверно", 100f, bun.getPrice(), 0.00001f);
     }
 }
