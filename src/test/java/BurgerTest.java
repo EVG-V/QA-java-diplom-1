@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,6 +32,7 @@ public class BurgerTest {
 
 
     @Test
+    @DisplayName("Проверка: добавление ингредиента")
     public void addIngredientTest() {
         Assert.assertTrue("Список ингредиентов не пустой", burger.ingredients.isEmpty());
         burger.addIngredient(mockIngredient1);
@@ -38,6 +40,7 @@ public class BurgerTest {
     }
 
     @Test
+    @DisplayName("Проверка: удаление ингредиента")
     public void removeIngredientTest() {
         Assert.assertTrue("Список ингредиентов не пустой", burger.ingredients.isEmpty());
         burger.addIngredient(mockIngredient1);
@@ -50,6 +53,7 @@ public class BurgerTest {
 
 
     @Test
+    @DisplayName("Проверка: изменение порядка ингредиентов")
     public void moveIngredientTest() {
         Assert.assertTrue("Список ингредиентов не пустой", burger.ingredients.isEmpty());
         burger.addIngredient(mockIngredient1);
@@ -63,6 +67,7 @@ public class BurgerTest {
     }
 
     @Test
+    @DisplayName("Провнерка: отображение цены бургера")
     public void getPriceTest() {
         Assert.assertTrue("Список ингредиентов не пустой", burger.ingredients.isEmpty());
         Mockito.when(mockBun.getPrice()).thenReturn(100f);
@@ -77,6 +82,7 @@ public class BurgerTest {
     }
 
     @Test
+    @DisplayName("Проверка: выведение чека")
     public void getReceiptTest() {
         Assert.assertTrue("Список ингредиентов не пустой", burger.ingredients.isEmpty());
         // mockBun
